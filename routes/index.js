@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/equipment', function(req, res) {
-    var equipment=JSON.parse(fs.readFileSync('../equipment.json'));
+    var equipment=JSON.parse(fs.readFileSync('./equipment.json'));
     res.json(equipment);
 });
 
