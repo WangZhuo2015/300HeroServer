@@ -5,7 +5,7 @@ const http = require('http')
 const createHandler = require('coding-webhook-handler')
 const handler = createHandler({
     path: '/',
-    token: '' // 在 coding 上面可以填写一个 token
+    token: '300Server' // 在 coding 上面可以填写一个 token
 })
 
 http.createServer((req, res) => {
