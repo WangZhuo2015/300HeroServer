@@ -4,7 +4,7 @@ var fs = require('fs');
 //var spider = require('../SpiderPart/Spider')
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: '星尘盒子for300英雄  Powered by Express' });
 });
 
 router.get('/equipment', function(req, res) {
@@ -12,7 +12,7 @@ router.get('/equipment', function(req, res) {
     res.json(equipment);
 });
 
-router.get('/equipment', function(req, res) {
+router.get('/hero', function(req, res) {
     var hero=JSON.parse(fs.readFileSync('./hero.json'));
     res.json(hero);
 });
