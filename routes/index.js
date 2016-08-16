@@ -12,7 +12,7 @@ router.get('/300Hero/API/equipment', function(req, res) {
     res.json(equipment);
 });
 
-router.get('/300Hero/API//hero', function(req, res) {
+router.get('/300Hero/API/hero', function(req, res) {
     var hero=JSON.parse(fs.readFileSync('./hero.json'));
     res.json(hero);
 });
