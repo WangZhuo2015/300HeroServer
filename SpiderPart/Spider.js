@@ -89,9 +89,6 @@ function loadDetailInfo(url,callback) {
             hero['attype'] = attype;
             hero.locate = locate;
             hero.highImage = highImage;
-            downLoadImage(highImage,'BigImage',name+'Image',function () {
-
-            });
             //英雄基础属性
             var hero_pro = [];
             $('body > div.page-box > div.page-hero > div.hero-pro').find(' > div').each(function(idx,element){
@@ -165,30 +162,31 @@ function loadDetailInfo(url,callback) {
             callback(hero)
         })
 }
-function downLoadImage(url,subpath,name,callback) {
-    var fileURI = url.startsWith('http') ? url : 'http://data.300hero.net' + url;
-    downloadImg(fileURI,'/Users/wz/Desktop/images/' + subpath + '/',name,function () {
-        console.dir(name + '下载完成')
-        callback()
-    })
-}
+// function downLoadImage(url,subpath,name,callback) {
+//     var fileURI = url.startsWith('http') ? url : 'http://data.300hero.net' + url;
+//     downloadImg(fileURI,'/Users/wz/Desktop/images/' + subpath + '/',name,function () {
+//         console.dir(name + '下载完成')
+//         callback()
+//     })
+// }
+
+// var downloadImg = function(uri, path, filename, callback){
+//     request.head(uri, function(err, res, body){
+//         // console.log('content-type:', res.headers['content-type']);  //这里返回图片的类型
+//         // console.log('content-length:', res.headers['content-length']);  //图片大小
+//         if (err) {
+//             console.log('err:'+ err);
+//             downloadImg(uri, path, filename ,callback);
+//             return false;
+//         }
+//         fixname = parseUrlForFileName(uri).split('.').pop()//[1] //不知道有木有last
+//         request(uri).pipe(fs.createWriteStream(path + filename + '.' + fixname)).on('close', callback);  //调用request的管道来下载到 images文件夹下
+//     });;;
+// };
 function parseUrlForFileName(address) {
     var filename = path.basename(address);
     return filename;
 }
-var downloadImg = function(uri, path, filename, callback){
-    request.head(uri, function(err, res, body){
-        // console.log('content-type:', res.headers['content-type']);  //这里返回图片的类型
-        // console.log('content-length:', res.headers['content-length']);  //图片大小
-        if (err) {
-            console.log('err:'+ err);
-            downloadImg(uri, path, filename ,callback);
-            return false;
-        }
-        fixname = parseUrlForFileName(uri).split('.').pop()//[1] //不知道有木有last
-        request(uri).pipe(fs.createWriteStream(path + filename + '.' + fixname)).on('close', callback);  //调用request的管道来下载到 images文件夹下
-    });;;
-};
 function write_to_file_in_JSON(items,filename) {
     console.log('完成'+items.length +'个抓取');
     var fs= require('fs');
@@ -280,41 +278,22 @@ function loadEquipmentInfo(url,item,callback) {
             callback(item)
         });
 }
-
-// function searchIDByName(name) {
-//     var res
-//     equipment.forEach(function (item,idx) {
-//         if (item.name == name) {
-//             res = item.id
-//             return item.id
-//         }
-//     })
-//     return res
-// }
-//var equipment = []
-
-
-
-// loadHeroList(function (items) {
-//     var count = 0
-//     items.forEach(function (hero,idx) {
-//         loadDetailInfo('http://data.300hero.net' + hero.subPage,function (detail) {
-//             hero.detail = detail
-//             count ++;
-//             if (count === items.length){
-//                 write_to_file_in_JSON(items,'hero')
-//             }
-//         })
-//     })
-// });
+loadHeroList(function (items) {
+    var count = 0
+    items.forEach(function (hero,idx) {
+        loadDetailInfo('http://data.300hero.net' + hero.subPage,function (detail) {
+            hero.detail = detail
+            count ++;
+            if (count === items.length){
+                write_to_file_in_JSON(items,'hero')
+            }
+        })
+    })
+});
 
 function catchEquipmentData(callback) {
     loadEquipmentList(function (items) {
         var res = [];
-        // items.forEach(function (item,idx) {
-        //     downLoadImage(item.image,'equipment','equipment'+ item.id)
-        //     console.info('开始下载第'+idx+'个装备图片')
-        // });
         items.forEach(function (item,idx) {
             loadEquipmentInfo('http://data.300hero.net' + item.subPage,item,function (item) {
                 res.push(item);
@@ -327,22 +306,17 @@ function catchEquipmentData(callback) {
     });
 }
 
-// loadEquipmentList(function (items) {
-//     var res = [];
-//     items.forEach(function (item,idx) {
-//         downLoadImage(item.image,'equipment','equipment'+ item.id)
-//         console.info('开始下载第'+idx+'个装备图片')
-//     });
-//
-//     // items.forEach(function (item,idx) {
-//     //     loadEquipmentInfo('http://data.300hero.net' + item.subPage,item,function (item) {
-//     //         res.push(item);
-//     //         if (res.length === items.length){
-//     //             write_to_file_in_JSON(res,'equipment')
-//     //         }
-//     //     })
-//     // })
-// });
+loadEquipmentList(function (items) {
+    var res = [];
+    items.forEach(function (item,idx) {
+        loadEquipmentInfo('http://data.300hero.net' + item.subPage,item,function (item) {
+            res.push(item);
+            if (res.length === items.length){
+                write_to_file_in_JSON(res,'equipment')
+            }
+        })
+    })
+});
 
 // function find_hero_image(items,index) {
 //     superagent.get('http://data.300hero.net' + items[index].subPage)

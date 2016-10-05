@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ad5b6b79-6ca9-470f-a3fb-103224479b78" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpiderPart/Spider.js" afterPath="$PROJECT_DIR$/SpiderPart/Spider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/equipment.json" afterPath="$PROJECT_DIR$/equipment.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hero.json" afterPath="$PROJECT_DIR$/hero.json" />
     </list>
     <ignored path="300HeroServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +28,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="300">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spider.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpiderPart/Spider.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-435">
+              <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#36#0" expanded="false" />
+                <element signature="e#561#985#0" expanded="false" />
+                <element signature="e#6185#6239#0" expanded="false" />
+                <element signature="e#6491#6552#0" expanded="false" />
+                <element signature="n#!!block;n#parseUrlForFileName#0" expanded="false" />
+                <element signature="n#!!block;n#loadEquipmentList#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hero.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hero.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="0" column="2550" selection-start-line="0" selection-start-column="2550" selection-end-line="0" selection-end-column="2550" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="equipment.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/equipment.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7965">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -51,10 +110,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SpiderPart/Spider.js" />
         <option value="$PROJECT_DIR$/autoBuild.sh" />
         <option value="$PROJECT_DIR$/WebHook.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/SpiderPart/Spider.js" />
       </list>
     </option>
   </component>
@@ -67,9 +126,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="1576" />
+    <option name="y" value="-117" />
     <option name="width" value="1366" />
-    <option name="height" value="741" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -124,14 +184,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
+              <option name="myItemId" value="SpiderPart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,8 +211,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.www">
+  <component name="RunManager" selected="Node.js.Spider.js">
     <configuration default="false" name="www" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="www" working-dir="$PROJECT_DIR$/bin">
+      <method />
+    </configuration>
+    <configuration default="false" name="Spider.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="Spider.js" working-dir="$PROJECT_DIR$/SpiderPart">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -224,12 +287,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Node.js.www" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.Spider.js" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.www" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.Spider.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.www" />
       </list>
     </recent_temporary>
   </component>
@@ -257,15 +322,21 @@
       <workItem from="1471107637011" duration="352000" />
       <workItem from="1471185331913" duration="158000" />
       <workItem from="1471282826108" duration="6000" />
-      <workItem from="1471352636046" duration="16000" />
+      <workItem from="1471352636046" duration="573000" />
+      <workItem from="1471661381297" duration="395000" />
+      <workItem from="1471671710528" duration="20000" />
+      <workItem from="1472285651235" duration="236000" />
+      <workItem from="1472437129408" duration="4000" />
+      <workItem from="1475668225212" duration="859000" />
+      <workItem from="1475685961537" duration="523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6799000" />
+    <option name="totallyTimeSpent" value="9393000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1366" height="741" extended-state="6" />
+    <frame x="1576" y="-117" width="1366" height="745" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -273,18 +344,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39816234" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990755" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -322,14 +393,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/SpiderPart/Spider.js</url>
-          <line>311</line>
+          <line>294</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -388,10 +459,10 @@
           <folding>
             <element signature="e#0#36#0" expanded="false" />
             <element signature="e#561#985#0" expanded="false" />
+            <element signature="e#6185#6239#0" expanded="false" />
+            <element signature="e#6491#6552#0" expanded="false" />
             <element signature="n#!!block;n#parseUrlForFileName#0" expanded="false" />
-            <element signature="e#6723#7311#0" expanded="false" />
             <element signature="n#!!block;n#loadEquipmentList#0" expanded="false" />
-            <element signature="n#!!block;n#loadEquipmentInfo#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -455,10 +526,10 @@
           <folding>
             <element signature="e#0#36#0" expanded="false" />
             <element signature="e#561#985#0" expanded="false" />
+            <element signature="e#6185#6239#0" expanded="false" />
+            <element signature="e#6491#6552#0" expanded="false" />
             <element signature="n#!!block;n#parseUrlForFileName#0" expanded="false" />
-            <element signature="e#6723#7311#0" expanded="false" />
             <element signature="n#!!block;n#loadEquipmentList#0" expanded="false" />
-            <element signature="n#!!block;n#loadEquipmentInfo#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -506,10 +577,10 @@
           <folding>
             <element signature="e#0#36#0" expanded="false" />
             <element signature="e#561#985#0" expanded="false" />
+            <element signature="e#6185#6239#0" expanded="false" />
+            <element signature="e#6491#6552#0" expanded="false" />
             <element signature="n#!!block;n#parseUrlForFileName#0" expanded="false" />
-            <element signature="e#6723#7311#0" expanded="false" />
             <element signature="n#!!block;n#loadEquipmentList#0" expanded="false" />
-            <element signature="n#!!block;n#loadEquipmentInfo#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -640,44 +711,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpiderPart/Spider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="311" column="0" selection-start-line="311" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="false" />
-            <element signature="e#561#985#0" expanded="false" />
-            <element signature="n#!!block;n#parseUrlForFileName#0" expanded="false" />
-            <element signature="e#6723#7311#0" expanded="false" />
-            <element signature="n#!!block;n#loadEquipmentList#0" expanded="false" />
-            <element signature="n#!!block;n#loadEquipmentInfo#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hero.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebHook.js" />
     <entry file="file://$PROJECT_DIR$/autoBuild.sh" />
-    <entry file="file://$PROJECT_DIR$/equipment.json">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpiderPart/Spider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#36#0" expanded="false" />
+            <element signature="e#561#985#0" expanded="false" />
+            <element signature="e#6185#6239#0" expanded="false" />
+            <element signature="e#6491#6552#0" expanded="false" />
+            <element signature="n#!!block;n#parseUrlForFileName#0" expanded="false" />
+            <element signature="n#!!block;n#loadEquipmentList#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -685,13 +751,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/equipment.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="-7965">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hero.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="0" column="2550" selection-start-line="0" selection-start-column="2550" selection-end-line="0" selection-end-column="2550" />
           <folding />
         </state>
       </provider>
