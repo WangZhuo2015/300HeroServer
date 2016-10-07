@@ -162,31 +162,6 @@ function loadDetailInfo(url,callback) {
             callback(hero)
         })
 }
-// function downLoadImage(url,subpath,name,callback) {
-//     var fileURI = url.startsWith('http') ? url : 'http://data.300hero.net' + url;
-//     downloadImg(fileURI,'/Users/wz/Desktop/images/' + subpath + '/',name,function () {
-//         console.dir(name + '下载完成')
-//         callback()
-//     })
-// }
-
-// var downloadImg = function(uri, path, filename, callback){
-//     request.head(uri, function(err, res, body){
-//         // console.log('content-type:', res.headers['content-type']);  //这里返回图片的类型
-//         // console.log('content-length:', res.headers['content-length']);  //图片大小
-//         if (err) {
-//             console.log('err:'+ err);
-//             downloadImg(uri, path, filename ,callback);
-//             return false;
-//         }
-//         fixname = parseUrlForFileName(uri).split('.').pop()//[1] //不知道有木有last
-//         request(uri).pipe(fs.createWriteStream(path + filename + '.' + fixname)).on('close', callback);  //调用request的管道来下载到 images文件夹下
-//     });;;
-// };
-function parseUrlForFileName(address) {
-    var filename = path.basename(address);
-    return filename;
-}
 function write_to_file_in_JSON(items,filename) {
     console.log('完成'+items.length +'个抓取');
     var fs= require('fs');
@@ -317,31 +292,3 @@ loadEquipmentList(function (items) {
         })
     })
 });
-
-// function find_hero_image(items,index) {
-//     superagent.get('http://data.300hero.net' + items[index].subPage)
-//         .end(function (err, sres) {
-//             // 常规的错误处理
-//             if (err) {
-//                 console.dir(err);
-//                 return;
-//                 //return next(err);
-//             }
-//             //基本信息
-//             var $ = cheerio.load(sres.text);
-//             var name = $('div .page-h1 :header').text();
-//             var highImage = $('div .page-hero .hero-img').find('img').attr('src');
-//             downLoadImage(highImage, 'BigImage', name + 'Image',function () {
-//                 //console.log(name + '下载完成')
-//                 if (index === items.length) {
-//                     return
-//                 }else{
-//                     find_hero_image(items,index+1)
-//                 }
-//             });
-//         })
-// }
-//
-// loadHeroList(function (items) {
-//     find_hero_image(items,0)
-// });
