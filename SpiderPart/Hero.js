@@ -165,7 +165,7 @@ function loadDetailInfo(heroInfo,callback) {
                 })
             });
             hero.hero_skill = hero_skill;
-            console.dir(hero.hero_info.name + '抓取完成');
+            console.dir(hero.name + '抓取完成');
             callback(hero)
         })
 }
