@@ -199,7 +199,7 @@ function parseUrlForFileName(address) {
 function write_to_file_in_JSON(items,filename) {
     console.log('完成'+items.length +'个抓取');
     var fs= require('fs');
-    var dirname = '/Users/wz/Desktop/'+filename+'.json';
+    var dirname = '../'+filename+'.json';
     var path = require('path');
     fs.writeFile(dirname, JSON.stringify(items));
 }
