@@ -19,7 +19,7 @@ if (typeof String.prototype.startsWith != 'function') {
 
 var superagent = require('superagent');
 var cheerio = require('cheerio');
-var request = require('request');
+//var request = require('request');
 var fs= require('fs');
 var path = require('path');
 var header = {
@@ -253,18 +253,18 @@ function loadEquipmentInfo(url,item,callback) {
             callback(item)
         });
 }
-loadHeroList(function (items) {
-    var count = 0
-    items.forEach(function (hero,idx) {
-        loadDetailInfo('http://data.300hero.net' + hero.subPage,function (detail) {
-            hero.detail = detail
-            count ++;
-            if (count === items.length){
-                write_to_file_in_JSON(items,'hero')
-            }
-        })
-    })
-});
+// loadHeroList(function (items) {
+//     var count = 0
+//     items.forEach(function (hero,idx) {
+//         loadDetailInfo('http://data.300hero.net' + hero.subPage,function (detail) {
+//             hero.detail = detail
+//             count ++;
+//             if (count === items.length){
+//                 write_to_file_in_JSON(items,'hero')
+//             }
+//         })
+//     })
+// });
 
 function catchEquipmentData(callback) {
     loadEquipmentList(function (items) {
