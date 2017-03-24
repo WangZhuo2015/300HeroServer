@@ -5,6 +5,9 @@ String.prototype.endsWith = function(suffix) {
 };
 
 // Js 判断前缀
+// String.prototype.startsWith = function (str){
+//     return this.indexOf(str) == 0;
+// };
 if (typeof String.prototype.startsWith != 'function') {
     // see below for better implementation!
     String.prototype.startsWith = function (str){
@@ -19,6 +22,7 @@ var cheerio = require('cheerio');
 var request = require('request');
 var fs= require('fs');
 var path = require('path');
+var async = require('async');
 var header = {
     'Host': 'data.300hero.net',
     'Connection': 'keep-alive',
@@ -170,7 +174,7 @@ function loadDetailInfo(heroInfo,callback) {
         })
 }
 function praseSrcToURL(src){
-    return src.startsWith('http') ? src : 'http://data.300hero.net' + src;
+    return src.startsWith('http') ? src.replace(' ','') : 'http://data.300hero.net' + src.replace(' ','');
 }
 function downLoadImage(url,subpath,name,callback) {
     // var fileURI = url.startsWith('http') ? url : 'http://data.300hero.net' + url;
@@ -289,23 +293,45 @@ function loadEquipmentInfo(url,item,callback) {
 }
 
 
-
-loadHeroList(function (items) {
-    var count = 0
+function downLoadAsync(most,callback) {
     var HeroData = []
-    items.forEach(function (hero,idx) {
-        loadDetailInfo(hero,function (detail) {
-            HeroData.push(detail)
-            count ++;
-            if (count === items.length){
-                HeroData.sort(function (a,b) {
-                    return a.id - b.id;
-                })
-                write_to_file_in_JSON(HeroData,'hero')
-            }
+    loadHeroList(function (items) {
+        var q=async.queue(function(url,callback){
+            console.log('working')
+        },most);
+
+        q.drain = function() {
+            write_to_file_in_JSON(HeroData,'hero')
+            console.log('任务全部完成,共耗时:'+(new Date()-stime)+'ms');
+        }
+        var filename = path.basename(url)+'.txt';
+
+        items.forEach(function (hero,idx) {
+            q.push({name: hero.name},loadDetailInfo(hero,function (detail) {
+                HeroData.push(detail)
+            }))
         })
-    })
-});
+    });
+}
+downLoadAsync(10,function () {
+    
+})
+// loadHeroList(function (items) {
+//     var count = 0
+//     var HeroData = []
+//     items.forEach(function (hero,idx) {
+//         loadDetailInfo(hero,function (detail) {
+//             HeroData.push(detail)
+//             count ++;
+//             if (count === items.length){
+//                 HeroData.sort(function (a,b) {
+//                     return a.id - b.id;
+//                 })
+//                 write_to_file_in_JSON(HeroData,'hero')
+//             }
+//         })
+//     })
+// });
 
 
 
