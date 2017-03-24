@@ -90,7 +90,7 @@ function loadDetailInfo(heroInfo,callback) {
             var name = $('body > div.page-box > div.page-h1 > h1').text();
             var attype = $('div .page-h1 .heroes-attype').text();
             var locate = $('div .page-h1 .heroes-locate').text();
-            var bigImage = $('div .page-hero .hero-img').find('img').attr('src');
+            var bigImage = $('div .page-hero .hero-img').find('img').attr('src').trim()
             hero.id = heroInfo.id.split('-').pop()
             hero.face = praseSrcToURL(heroInfo.face)
             hero.name = name;
